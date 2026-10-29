@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nelson Ray · Interactive Design</title>
+  <title>Charles Ray · Interactive Design</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -34,29 +34,15 @@
       overflow-x: hidden;
     }
     a { color: inherit; text-decoration: none; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
     img { max-width: 100%; display: block; }
     ::selection { background: var(--accent); color: #fff; }
     .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
 
     /* ─── CURSOR ─── */
-    .cursor-dot {
-      position: fixed; width: 8px; height: 8px;
-      border-radius: 50%; background: var(--accent);
-      pointer-events: none; z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: width 0.15s, height 0.15s, background 0.15s;
-      mix-blend-mode: difference;
-    }
-    .cursor-ring {
-      position: fixed; width: 40px; height: 40px;
-      border-radius: 50%; border: 1px solid var(--accent);
-      pointer-events: none; z-index: 9998;
-      transform: translate(-50%, -50%);
-      transition: all 0.12s ease-out;
-      mix-blend-mode: difference;
-      opacity: 0.6;
-    }
-
     /* ─── NAV ─── */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
@@ -538,7 +524,7 @@
       section { padding: 80px 0; }
       .work-grid { grid-template-columns: 1fr; }
       .contact-form .btn { width: 100%; justify-content: center; }
-      .cursor-dot, .cursor-ring { display: none; }
+
     }
     @media (max-width: 480px) {
       .hero h1 { font-size: 2.2rem; }
@@ -548,15 +534,12 @@
 </head>
 <body>
 
-  <div class="cursor-dot" id="cursorDot"></div>
-  <div class="cursor-ring" id="cursorRing"></div>
-
-  <canvas id="particles-canvas"></canvas>
+<canvas id="particles-canvas"></canvas>
 
   <!-- ─── NAV ─── -->
   <nav>
     <div class="container">
-      <a href="#" class="logo">Nelson Ray</a>
+      <a href="#" class="logo">Charles Ray</a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">About</a></li>
         <li><a href="#work">Work</a></li>
@@ -574,14 +557,14 @@
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
     <div class="container">
-      <div class="hero-badge">Interactive Design Major</div>
+      <div class="hero-badge">UX/UI Designer · User-Centered Design</div>
       <h1>
         Designing<br>
-        <span class="gradient-text">for users</span><br>
-        <span class="outline-text">digitally</span>
+        <span class="gradient-text">intuitive digital</span><br>
+        <span class="outline-text">experiences</span>
       </h1>
       <p>
-        Nelson Ray — Interactive designer passionate about user-centered design.
+        I'm Charles Ray, a UX/UI designer who uses research, prototyping, and user-centered design to make digital products easier to understand and use.
       </p>
       <div class="hero-actions">
         <a href="#work" class="btn btn-primary">
@@ -592,8 +575,8 @@
         </a>
       </div>
       <div class="hero-metrics">
-        <div><strong>3+</strong><span>Years learning</span></div>
-        <div><strong>6+</strong><span>Projects built</span></div>
+        <div><strong>3</strong><span>Featured case studies</span></div>
+        <div><strong>UX/UI</strong><span>Research to prototype</span></div>
       </div>
     </div>
     <div class="scroll-indicator">
@@ -608,24 +591,15 @@
       <span class="section-label reveal">About</span>
       <div class="about-grid">
         <div class="about-visual reveal">
-          <div class="glow-ring"></div>
-          <div class="glow-ring"></div>
-          <div class="glow-ring"></div>
-          <div class="initials">NR</div>
+          <img class="about-photo" src="Selfie.jpg" alt="Portrait of Charles Ray" loading="lazy">
         </div>
         <div class="about-text reveal">
           <h3>Creating meaningful interactions through user-centered design</h3>
           <p>
-            Hi, I'm Nelson Ray, a UI/UX designer a graduate from Kennesaw State University.
-            <br />
-            During my time as an undergrad, I have gained many skills.
-            <br />
-            I was formerly working toward a degree in game development, as I was enthralled by games growing up. However, 
-            along the way I realized I have a even greater passion for user interaction in particular, and so I pivoted to a degree
-            in Interactive Design. Now I'm obsessed with learning about and creating user-centered designs.
+            I'm Charles Ray, a UX/UI designer and a graduate of Kennesaw State University. My background began in game development, where I grew interested in how people interact with digital experiences. That interest led me to Interactive Design and a focus on creating intuitive, inclusive products through user-centered research and prototyping.
           </p>
           <p>
-            Great design and prototypes come from great user research.
+            I believe thoughtful design starts with understanding the people who use it.
           </p>
           <div class="skill-group">
             <h4>Skills</h4>
@@ -650,7 +624,7 @@
     <div class="container">
       <span class="section-label reveal">Projects</span>
       <h2 class="section-title reveal">Work</h2>
-      <p class="section-desc reveal">A collection of interactive projects</p>
+      <p class="section-desc reveal">Selected projects exploring user research, interaction design, and prototyping.</p>
       <div class="work-grid">
         <a href="https://goodness-successes-552384.framer.app/ecohero-detail" target="_blank" rel="noopener" class="work-card-link">
           <div class="work-card reveal">
@@ -674,8 +648,8 @@
             </div>
             <div class="work-body">
               <span class="tag">Team Project 2025</span>
-              <h3>Supplyhive</h3>
-              <p>A productivity tool designed to imitate Zebra screens to minimize clutter and help workers focus on important tasks.</p>
+              <h3>SupplyHive</h3>
+              <p>A streamlined inventory-management interface designed to make handheld barcode-scanner workflows clearer and easier to learn.</p>
               <span class="arrow">→</span>
             </div>
           </div>
@@ -705,8 +679,8 @@
   <section id="showcase">
     <div class="container">
       <span class="section-label reveal">Showcase</span>
-      <h2 class="section-title reveal">I have a particular set of skills.</h2>
-      <p class="section-desc reveal">Skills I have acquired over my career as an Interactive Designer and then some.</p>
+      <h2 class="section-title reveal">Design skills grounded in user needs.</h2>
+      <p class="section-desc reveal">Research, design, and prototyping skills I use to create clear, accessible digital experiences.</p>
     </div>
     <div class="showcase-marquee">
       <div class="marquee-track" id="marqueeTrack">
@@ -757,48 +731,11 @@
         <a href="https://docs.google.com/document/d/1MIQnyVl8kI0D7TG3ZqMaTbMFquFmtyYah8viAoM02Co/edit?tab=t.0">Resume</a>
         <a href="https://www.linkedin.com/in/nelson-ray-256bb5246/">LinkedIn</a>
       </div>
-      <p>&copy; 2026 Nelson Ray</p>
+      <p>&copy; 2026 Charles Ray</p>
     </div>
   </footer>
 
   <script>
-    // ─── Custom cursor ───
-    const dot = document.getElementById('cursorDot');
-    const ring = document.getElementById('cursorRing');
-    let mouseX = 0, mouseY = 0;
-    let ringX = 0, ringY = 0;
-
-    document.addEventListener('mousemove', e => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-      dot.style.left = mouseX + 'px';
-      dot.style.top = mouseY + 'px';
-    });
-
-    function animateRing() {
-      ringX += (mouseX - ringX) * 0.12;
-      ringY += (mouseY - ringY) * 0.12;
-      ring.style.left = ringX + 'px';
-      ring.style.top = ringY + 'px';
-      requestAnimationFrame(animateRing);
-    }
-    animateRing();
-
-    document.querySelectorAll('a, button, .work-card').forEach(el => {
-      el.addEventListener('mouseenter', () => {
-        ring.style.width = '56px';
-        ring.style.height = '56px';
-        ring.style.borderColor = 'var(--accent)';
-        ring.style.opacity = '0.3';
-      });
-      el.addEventListener('mouseleave', () => {
-        ring.style.width = '40px';
-        ring.style.height = '40px';
-        ring.style.borderColor = 'var(--accent)';
-        ring.style.opacity = '0.6';
-      });
-    });
-   
     // ─── Particles ───
     const canvas = document.getElementById('particles-canvas');
     const ctx = canvas.getContext('2d');
@@ -839,8 +776,6 @@
     const particleCount = Math.min(80, Math.floor(window.innerWidth * window.innerHeight / 12000));
     for (let i = 0; i < particleCount; i++) particles.push(new Particle());
 
-    let mouseP = { x: -1000, y: -1000 };
-    document.addEventListener('mousemove', e => { mouseP.x = e.clientX; mouseP.y = e.clientY; });
 
     function drawLines() {
       for (let i = 0; i < particles.length; i++) {
@@ -856,17 +791,6 @@
             ctx.lineWidth = 0.5;
             ctx.stroke();
           }
-        }
-        const dx = particles[i].x - mouseP.x;
-        const dy = particles[i].y - mouseP.y;
-        const dist = Math.sqrt(dx * dx + dy * dy);
-        if (dist < 160) {
-          ctx.beginPath();
-          ctx.moveTo(particles[i].x, particles[i].y);
-          ctx.lineTo(mouseP.x, mouseP.y);
-          ctx.strokeStyle = `rgba(16,185,129,${0.08 * (1 - dist / 160)})`;
-          ctx.lineWidth = 0.5;
-          ctx.stroke();
         }
       }
     }
